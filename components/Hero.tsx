@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -6,9 +6,7 @@ import CustomButton from "./CustomButton";
 import StyledButton from "./StyledButton";
 
 const Hero = () => {
-  const handleScroll = () => {
-
-  }
+  const handleScroll = () => {};
   return (
     <div className="hero">
       <div className="flex-1 pt-36 padding-x">
@@ -19,10 +17,17 @@ const Hero = () => {
           Streamline your car rental experience with out effortless booking
           process.
         </p>
-        <CustomButton title="Explore Cars" containerStyles="bg-primary-blue text-white rounded-full mt-10"
-        handleClick={handleScroll}/>
-        <StyledButton title="Explore Cars" 
-        handleClick={handleScroll}/>
+        <CustomButton
+          title="Explore Cars"
+          containerStyles="bg-primary-blue text-white rounded-full mt-10"
+          handleClick={handleScroll}
+        />
+        <StyledButton title="Explore Cars" handleClick={handleScroll} />
+      </div>
+      <div className="hero__image__container">
+        <div className="hero__image">
+          <Image src="/hero.png" alt="hero" fill className="object-contain"/>
+        </div>
       </div>
     </div>
   );
